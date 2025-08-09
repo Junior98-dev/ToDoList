@@ -46,7 +46,11 @@ public class ExerciceStringMethode {
     // Exemple : "user@example.com" -> "exemple.com"
     public static String extractDomain(String email) {
         // TODO: Implement this method
-        return "";
+        // 1 - rechercher la position de @
+        // 2 - Extraire tout à partir de cette position + 1
+
+        int firstIndex = email.indexOf('@');
+        return email.substring(firstIndex + 1);
     }
 
     // Exercice 5 : substring() avec deux paramètres
@@ -54,7 +58,8 @@ public class ExerciceStringMethode {
     // Exemple : "user@example.com" -> "user"
     public static String extractUsername(String email) {
         // TODO: Implement this method
-        return "";
+        int firstIndex = email.indexOf('@');
+        return email.substring(0, firstIndex);
     }
 
     // Exercice 6 : toLowerCase() et toUpperCase()
@@ -62,6 +67,7 @@ public class ExerciceStringMethode {
     // Exemple : "Hello World" -> "hElLo wOrLd"
     public static String alternateCase(String str) {
         // TODO: Implement this method
+
         return "";
     }
 
@@ -70,7 +76,10 @@ public class ExerciceStringMethode {
     // Exemple : censor("This is bad word", "bad") -> "This is *** word"
     public static String censor(String text, String badWord) {
         // TODO: Implement this method
-        return "";
+        if(text.contains(badWord)) {
+            text = text.replace(badWord, "***");
+        }
+        return text;
     }
 
     // Exercice 8 : Méthodes multiples combinées
@@ -78,6 +87,18 @@ public class ExerciceStringMethode {
     // Exemple : "Racecar" -> vrai, "Hello" -> faux
     public static boolean isPalindrome(String str) {
         // TODO: Implement this method
+        String trans = str.toLowerCase();
+        char[] chars = trans.toCharArray();
+        char[] result = new char[chars.length];
+        for (int i = chars.length - 1; i >= 0 ; i--) {
+            result[chars.length - i - 1] = chars[i];
+        }
+        String temp = new String(result);
+
+
+        if (temp.equals(trans)) {
+            return true;
+        }
         return false;
     }
 
@@ -86,7 +107,9 @@ public class ExerciceStringMethode {
     // Exemple : "document.pdf" -> "pdf", "archive.tar.gz" -> "gz"
     public static String getFileExtension(String filename) {
         // TODO: Implement this method
-        return "";
+        int index = filename.lastIndexOf('.'); // Recherche la dernière occurrence du caractère '.' dans la chaîne
+
+        return filename.substring(index + 1);
     }
 
     // Exercice 10 : Avancé - Title Case
@@ -94,7 +117,16 @@ public class ExerciceStringMethode {
     // Exemple : "hello world java" -> "Hello World Java"
     public static String toTitleCase(String str) {
         // TODO: Implement this method
-        return "";
+        char[] chars = str.toCharArray();
+        if (chars.length > 0) {
+            chars[0] = Character.toUpperCase(chars[0]);
+        }
+        for (int i = 1; i < chars.length - 1; i++) {
+            if (chars[i] == ' ' && i + 1 < chars.length) {
+                chars[i + 1] = Character.toUpperCase(chars[i + 1]);
+            }
+        }
+        return new String(chars);
     }
 
     // Main method with test cases

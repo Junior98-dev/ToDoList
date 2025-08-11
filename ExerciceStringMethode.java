@@ -13,8 +13,7 @@ public class ExerciceStringMethode {
 
         char start = str.charAt(0); // premier caractère
         char end = str.charAt(str.length() - 1); // dernier caractère
-        String result = "" + start + end; // concaténer les deux caractères
-        return result;
+        return "" + start + end;
     }
 
     // Exercice 2 : contains()
@@ -67,8 +66,22 @@ public class ExerciceStringMethode {
     // Exemple : "Hello World" -> "hElLo wOrLd"
     public static String alternateCase(String str) {
         // TODO: Implement this method
+        // 1 - Convertir la chaîne en tableau de caractères
+        // 2 - Parcourir le tableau et alterner la casse
 
-        return "";
+        char[] chars = str.toCharArray();
+        for (int i = 0; i < chars.length; i++) {
+            if (i % 2 == 0){
+                chars[i] = Character.toLowerCase(chars[i]);
+            }else {
+                chars[i] = Character.toUpperCase(chars[i]);
+            }
+        }
+
+
+        String result = new String(chars);
+
+        return result;
     }
 
     // Exercice 7 : replace()

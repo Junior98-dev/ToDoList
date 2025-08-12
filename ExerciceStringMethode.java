@@ -77,8 +77,6 @@ public class ExerciceStringMethode {
                 chars[i] = Character.toUpperCase(chars[i]);
             }
         }
-
-
         String result = new String(chars);
 
         return result;

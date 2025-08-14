@@ -1,0 +1,241 @@
+Exercise 1: Basic StringBuilder Operations
+
+// TODO: Create a method that:
+// - Takes a String input "Hello World"
+// - Use StringBuilder to:
+//   a) Reverse the string
+//   b) Insert "Beautiful " at index 6
+//   c) Delete "World"
+//   d) Append " Java Programming"
+//   e) Replace "Beautiful" with "Amazing"
+// - Print StringBuilder capacity and length at each step
+// - Return the final string
+
+Exercise 2: StringBuilder Performance Test
+
+// TODO: Compare performance:
+// 1. Concatenate numbers 1-10000 using String (+)
+// 2. Concatenate numbers 1-10000 using StringBuilder
+// - Measure time for both approaches using System.currentTimeMillis()
+// - Print the time difference
+// - Explain why there's a difference
+
+Exercise 3: Custom String Builder
+
+// TODO: Create a method buildCustomString that:
+// - Takes an array of words
+// - Builds a sentence with StringBuilder where:
+//   - First letter of each word is uppercase
+//   - Words are separated by " - "
+//   - The sentence ends with "!"
+// - Example: ["hello", "world"] → "Hello - World!"
+// - Also track and print capacity changes
+
+Exercise 4: String Pool Basics
+
+// TODO: Demonstrate String Pool behavior:
+public class StringPoolTest {
+    // Create the following strings and test with == and equals():
+    // String s1 = "Java";
+    // String s2 = "Java";
+    // String s3 = new String("Java");
+    // String s4 = new String("Java").intern();
+    // String s5 = "Ja" + "va";
+    // String s6 = "Ja";
+    // String s7 = s6 + "va";
+    // 
+    // Print which comparisons return true/false and explain why
+    // Draw a diagram showing which strings point to the same object
+}
+
+Exercise 5: String Pool Memory Test
+
+// TODO: Create a program that:
+// - Creates 1000 string literals "String1" to "String1000"
+// - Creates 1000 new String objects with same values
+// - Uses intern() on half of the new String objects
+// - Count how many unique objects exist (use a Set with System.identityHashCode())
+// - Demonstrate memory implications
+
+Exercise 6: String Pool Puzzle
+
+// TODO: Predict the output without running:
+public class StringPoolPuzzle {
+    // String a = "Hello";
+    // String b = "Hello";
+    // String c = "Hel" + "lo";
+    // String d = "Hel";
+    // String e = d + "lo";
+    // String f = "Hello".substring(0);
+    // String g = new String("Hello");
+    // String h = g.intern();
+    //
+    // Which of these comparisons (==) will be true?
+    // After predicting, run and verify your answers
+}
+
+Exercise 7: Basic Array Sorting
+
+// TODO: Implement sorting demonstrations:
+// 1. Sort an int array in ascending order
+// 2. Sort a String array alphabetically
+// 3. Sort a String array by length (implement Comparator)
+// 4. Sort an array of custom Person objects by:
+//    a) Age
+//    b) Name
+//    c) Age then Name (if ages are equal)
+// Use Arrays.sort() with appropriate comparators
+
+Exercise 8: Partial Array Sorting
+
+// TODO: Create methods that:
+// - Sort only a portion of an array (indices 2-7)
+// - Sort an array in descending order
+// - Sort a 2D array by:
+//   a) First element of each sub-array
+//   b) Sum of elements in each sub-array
+// - Implement stable vs unstable sort demonstration
+
+Exercise 9: Custom Sorting Challenge
+
+// TODO: Sort an array of strings containing numbers and letters:
+// Input: ["a10", "a2", "b1", "a1", "b10", "b2"]
+// Required output: ["a1", "a2", "a10", "b1", "b2", "b10"]
+// - Letters should be sorted alphabetically
+// - Numbers after letters should be sorted numerically (not lexicographically)
+// Hint: Create a custom Comparator
+
+Exercise 10: Basic Binary Search
+
+// TODO: Implement these binary search scenarios:
+// 1. Search for an integer in a sorted array
+// 2. Search for a String in a sorted array
+// 3. Handle the case when element is not found
+// 4. Find insertion point for a new element
+// - Use Arrays.binarySearch()
+// - Print the index or insertion point for each search
+// - Explain what negative return values mean
+
+Exercise 11: Binary Search with Comparator
+
+// TODO: Create a Person class with name and age
+// - Create an array of Person objects sorted by age
+// - Use binary search to find a person by age
+// - Create another array sorted by name
+// - Use binary search with custom comparator to find by name
+// - What happens if array isn't sorted properly? Test it.
+
+Exercise 12: Binary Search Applications
+
+// TODO: Solve these problems using binary search:
+// 1. Find the first occurrence of a duplicate element
+// 2. Find the last occurrence of a duplicate element
+// 3. Count occurrences of an element in sorted array
+// 4. Find the closest element to a target value
+// Hint: Use binarySearch and manipulate the result
+
+Exercise 13: Basic Math Operations
+
+// TODO: Create a MathOperations class that demonstrates:
+// - Finding min/max of multiple numbers
+// - Calculating powers and square roots
+// - Rounding numbers (ceil, floor, round) with different examples
+// - Generating random numbers in specific ranges:
+//   a) Random int between 1-100
+//   b) Random double between 0.0-1.0
+//   c) Random int between -50 and 50
+// - Calculate hypotenuse using Math.hypot()
+
+Exercise 14: Math API Advanced
+
+// TODO: Implement these mathematical calculations:
+// 1. Calculate compound interest: A = P(1 + r/n)^(nt)
+// 2. Find distance between two points (x1,y1) and (x2,y2)
+// 3. Convert degrees to radians and vice versa
+// 4. Calculate area of circle, triangle using proper formulas
+// 5. Generate normally distributed random numbers
+// 6. Calculate factorial using Math functions (hint: use logarithms)
+
+Exercise 15: Math Challenge - Statistics
+
+// TODO: Create a Statistics calculator that:
+// - Calculates mean, median, mode of an array
+// - Calculates standard deviation
+// - Finds percentiles (25th, 50th, 75th)
+// - Uses Math.sqrt(), Math.pow(), Math.abs()
+// - Handles edge cases (empty array, single element)
+
+Exercise 16: LocalDate and LocalTime Basics
+
+// TODO: Create methods that:
+// 1. Get current date and time separately
+// 2. Create specific dates (your birthday, new year 2025)
+// 3. Calculate your age in years, months, and days
+// 4. Find what day of week you were born
+// 5. Calculate days until next birthday
+// 6. Add/subtract days, months, years to dates
+
+Exercise 17: LocalDateTime and ZonedDateTime
+
+// TODO: Implement these scenarios:
+// 1. Schedule a meeting at 3 PM EST, show time in:
+//    - PST
+//    - GMT
+//    - JST (Tokyo)
+// 2. Calculate flight duration:
+//    - Departs: New York 10:00 AM EST
+//    - Arrives: London 10:00 PM GMT
+// 3. Handle daylight saving time transitions
+
+Exercise 18: Date Formatting and Parsing
+
+// TODO: Create a DateFormatter utility that:
+// 1. Formats dates in different patterns:
+//    - MM/dd/yyyy
+//    - dd-MMM-yyyy
+//    - EEEE, MMMM d, yyyy
+// 2. Parses string dates in various formats
+// 3. Creates custom formatter for "1st Jan 2024" format
+// 4. Handles invalid date strings gracefully
+
+Exercise 19: Period and Duration
+
+// TODO: Calculate the following:
+// 1. Time between two LocalDateTimes (in hours, minutes, seconds)
+// 2. Business days between two dates (exclude weekends)
+// 3. Age in years, months, days using Period
+// 4. Project deadline reminder:
+//    - If deadline > 30 days: show in months
+//    - If deadline 7-30 days: show in days
+//    - If deadline < 7 days: show in hours
+
+Exercise 20: Temporal Adjusters
+
+// TODO: Use TemporalAdjusters to find:
+// 1. First Monday of next month
+// 2. Last day of current year
+// 3. Next Friday the 13th
+// 4. All Fridays in current month
+// 5. Custom adjuster: next working day (skip weekends)
+
+Challenge 2: Advanced Sorting and Searching System
+
+// TODO: Create a StudentGradeSystem that:
+// - Stores Student objects (name, id, grade, enrollmentDate)
+// - Implements multiple sort options (by grade, name, date)
+// - Uses binary search to find students efficiently
+// - Handles duplicate grades
+// - Finds top N students
+// - Calculates statistics using Math API
+
+Challenge 3: Date/Time Scheduler Application
+
+// TODO: Build a meeting scheduler that:
+// - Schedules recurring meetings (daily, weekly, monthly)
+// - Handles different time zones
+// - Finds available time slots
+// - Calculates meeting duration
+// - Sends reminders (X days/hours before meeting)
+// - Handles conflicts and overlaps
+// - Formats dates for different locales
+

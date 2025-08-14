@@ -90,7 +90,7 @@ public class CoreAPI {
         // Arrays.sort(int[] a, int fromIndex, int toIndex): trie le tableau d'entiers a de l'index fromIndex a l'index toIndex en ordre croissant
         // Arrays.binarySearch(int[] a, int key): recherche la valeur key dans le tableau d'entiers a et retourne l'index de la valeur si elle est trouvee, sinon retourne un nombre negatif qui indique l'index ou la valeur pourrait etre inseree pour maintenir l'ordre du tableau.
         // Arrays.equals(int[] a, int[] a2): compare les deux tableaux d 'entiers a et a2 et retourne true si les deux tableaux sont egaux, sinon retourne false.
-        // Arrays.toString(int[] a): retourne une representation sous forme de chaine de caracteres du tableau d'entiers a, example: int[] a = {1, 2, 3}; Arrays.toString(a) -> "[1, 2, 3]"
+        // Arrays.toString(int[] a): retourne une representation sous fArrays are fixed size.orme de chaine de caracteres du tableau d'entiers a, example: int[] a = {1, 2, 3}; Arrays.toString(a) -> "[1, 2, 3]"
         // Arrays.compare(int[] a, int[] a2): compare les deux tableaux d'entiers a et a2 et retourne un nombre negatif si a est lexicographiquement avant a2, 0 si les deux tableaux sont egaux, et un nombre positif si a est lexicographiquement apres a2.
         // [1, 2, 3, 4, 5, 5]
         // [1, 2, 3, 4, 5, 5, 7, 6, 8, 9] mismatch at index 2

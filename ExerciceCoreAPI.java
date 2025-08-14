@@ -1,5 +1,8 @@
 package coreapi;
 
+import java.time.*;
+import java.util.Arrays;
+
 public class ExerciceCoreAPI {
 
     // Exercise 1: Basic StringBuilder Operations

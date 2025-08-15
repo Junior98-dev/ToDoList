@@ -67,10 +67,21 @@ public class ExerciceCoreAPI {
         }
         long endTime = System.currentTimeMillis();
         long totalTime = endTime - startTime;
-        System.out.println("Total time : " + totalTime + " ms");
+        System.out.println("Total time String : " + totalTime + " ms");
 
 
         // 2. Concatenate numbers 1-10000 using StringBuilder
+
+        startTime = System.currentTimeMillis();
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i <= 10000; i++) {
+            sb.append(i);
+        }
+        endTime = System.currentTimeMillis();
+        long totalTime2 = endTime - startTime;
+        System.out.println("Total time StringBuilder : " + totalTime2 + " ms");
+
+
         // - Measure time for both approaches using System.currentTimeMillis()
         // - Print the time difference
         // - Explain why there's a difference

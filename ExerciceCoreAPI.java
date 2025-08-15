@@ -1,6 +1,7 @@
 package coreapi;
 
 import java.time.*;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class ExerciceCoreAPI {
@@ -52,7 +53,8 @@ public class ExerciceCoreAPI {
 
     };
 
-    public String buildCustomString() {
+    public String buildCustomString(String[] words) {
+
         return "";
     };
 

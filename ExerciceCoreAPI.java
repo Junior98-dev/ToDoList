@@ -89,5 +89,6 @@ public class ExerciceCoreAPI {
         // - Explain why there's a difference
         System.out.println("String en Java est immutable → chaque + crée une nouvelle chaîne, ce qui implique copie + allocation mémoire → ça explose en temps quand les boucles sont grandes.");
         System.out.println("StringBuilder est mutable → il garde un buffer interne et ajoute directement dedans → pas de création d’objet à chaque étape → beaucoup plus rapide.");
+
     }
 }

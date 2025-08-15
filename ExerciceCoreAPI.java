@@ -54,6 +54,6 @@ public class ExerciceCoreAPI {
 
 
     public static void main(String[] args) {
-        helloWorld("Hello World");
+        //helloWorld("Hello World");
     }
 }

@@ -257,7 +257,7 @@ Instant instant = _____________________________;
 **E.** `time.toInstant()`  
 **F.** `zonedDateTime.toInstant()`
 
-A, 
+A, B
 
 ### 15. What is the output of the following? (Choose all that apply.)
 

@@ -54,9 +54,8 @@ public class ExerciceCoreAPI {
 
     };
 
-    public String buildCustomString(String[] words) {
+    public static String buildCustomString(String[] words) {
 
-        System.out.println(words.length);
         StringBuilder str = new StringBuilder();
 
         // Definir un tableau de Caractère pour stocker les caractère de chaque chaine[i] du tableau
@@ -90,9 +89,13 @@ public class ExerciceCoreAPI {
 
     public static void main(String[] args) {
 
-        ExerciceCoreAPI ex = new ExerciceCoreAPI();
-        String test = ex.buildCustomString(new String[]{""});
-        System.out.println(test);
+
+        // Test Exercice 3 :
+        System.out.println("Exercise 3 - Custom String Builder:");
+        System.out.println("buildCustomString(\"hello\",\"word\"): " + buildCustomString(new String[]{"hello", "world"}));
+        System.out.println("Expected: Hello-World!\n");
+
+
 
         //helloWorld("Hello World");
 

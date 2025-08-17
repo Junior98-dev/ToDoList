@@ -56,11 +56,44 @@ public class ExerciceCoreAPI {
 
     public String buildCustomString(String[] words) {
 
-        return "";
+        System.out.println(words.length);
+        StringBuilder str = new StringBuilder();
+
+        // Definir un tableau de Caractère pour stocker les caractère de chaque chaine[i] du tableau
+        char[] chars;
+        String word = "";
+
+        // First letter of each word is uppercase
+        if (words.length == 0) {
+            return "Le tableau inséré est vide";
+        }
+        if (words.length == 1 && words[0].isBlank()) {
+            return "Le tableau est vide";
+        }
+        for (String s : words) {
+            if (!s.isBlank()) { // A verifier
+                chars = s.toCharArray();
+                for (int j = 0; j < chars.length; j++) {
+                    chars[0] = Character.toUpperCase(chars[0]);
+                }
+                word = String.valueOf(chars);
+                //word = new String(word);
+                str.append(word);
+                str.append("-");
+            }
+        }
+        str.deleteCharAt(str.length() - 1);
+
+        return str.toString() + "!";
     };
 
 
     public static void main(String[] args) {
+
+        ExerciceCoreAPI ex = new ExerciceCoreAPI();
+        String test = ex.buildCustomString(new String[]{""});
+        System.out.println(test);
+
         //helloWorld("Hello World");
 
        /* // Exercise 2: StringBuilder Performance Test

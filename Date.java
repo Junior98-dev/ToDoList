@@ -6,6 +6,8 @@ import java.time.temporal.ChronoUnit;
 public class Date {
 
     public static void main(String[] args) {
+
+        /*
         // Java nous permet de modeliser le concepte de date, jour, mois, année
         LocalDate today = LocalDate.now();
         System.out.println("Today is: " + today);
@@ -81,6 +83,8 @@ public class Date {
         Instant instant = Instant.now();
         instant.atZone(ZoneId.of("Europe/Paris")).toLocalDateTime();
         long epochMilli = instant.toEpochMilli();
+        */
+
 
 
     }

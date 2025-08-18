@@ -86,14 +86,40 @@ public class ExerciceCoreAPI {
         return str.toString() + "!";
     };
 
+    //Exercise 7: Basic Array Sorting
+    // TODO: Implement sorting demonstrations:
+
+    public static int[] sort(int[] tab){
+
+
+        for(int i = 0 ; i < tab.length - 1; i++){
+            int minIndex = i;
+            // Chercher l'indice du plus petit élément dans la partie non triée
+            for(int j = i+1; j < tab.length; j++){
+                if(tab[j] < tab[minIndex]){
+                    minIndex = j;
+                }
+            }
+            int temp = tab[i];
+            tab[i] = tab[minIndex];
+            tab[minIndex] = temp;
+        }
+
+        return  tab;
+    };
+
 
     public static void main(String[] args) {
 
+        int[] tab = {7, 2, 9, 4,1};
+        int[] tab2 = sort(tab);
+        System.out.println(Arrays.toString(tab2));
 
+        /*
         // Test Exercice 3 :
         System.out.println("Exercise 3 - Custom String Builder:");
         System.out.println("buildCustomString(\"hello\",\"word\"): " + buildCustomString(new String[]{"hello", "world"}));
-        System.out.println("Expected: Hello-World!\n");
+        System.out.println("Expected: Hello-World!\n");*/
 
 
 

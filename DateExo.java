@@ -44,7 +44,7 @@ public class DateExo {
         // Formatage de Date
 
         var aujourdhui = new Date();
-        var format = new SimpleDateFormat("'le' dd MMMM yyyy 'à' HH:mm:ss Z");
+        var format = new SimpleDateFormat("E 'le' dd MMMM yyyy 'à' HH:mm:ss Z");
         System.out.println("aujourdhui : " + format.format(aujourdhui));
 
 

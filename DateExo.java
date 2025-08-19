@@ -21,5 +21,23 @@ public class DateExo {
 
         System.out.println(period.getYears()+"ans, " +  period.getMonths()+"Mois, et "+period.getDays() + "Jours");
 
+
+        /**
+         * Duration
+         * Représente une durée en seconde ou nanosecondes
+         * Conçu pour travailler avec des temps (LocalDateTime, Instant, etc)
+         * Utilisé quand tu veux calculer des durées precise (heures, minutes, secondes)
+         */
+
+        LocalDateTime t1 = LocalDateTime.of(2025, 8, 19, 8, 0);
+        LocalDateTime t2 = LocalDateTime.of(2025, 8, 19, 12, 30);
+
+        Duration duration = Duration.between(t1, t2);
+
+        System.out.println("Heures : "+ duration.toHours());
+        System.out.println("Minutes : "+ duration.toMinutes());
+        System.out.println("Secondes : "+ duration.toSeconds());
+        System.out.println("Secondes : "+ duration.getSeconds());
+
     }
 }

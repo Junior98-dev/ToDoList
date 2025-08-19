@@ -1,7 +1,9 @@
 package coreapi;
 
+import java.text.SimpleDateFormat;
 import java.time.*;
-import java.time.temporal.ChronoUnit;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
 
 public class DateExo {
     public static void main(String[] args) {
@@ -38,6 +40,26 @@ public class DateExo {
         System.out.println("Minutes : "+ duration.toMinutes());
         System.out.println("Secondes : "+ duration.toSeconds());
         System.out.println("Secondes : "+ duration.getSeconds());
+
+        // Formatage de Date
+
+        var aujourdhui = new Date();
+        var format = new SimpleDateFormat("'le' dd MMMM yyyy 'à' HH:mm:ss Z");
+        System.out.println("aujourdhui : " + format.format(aujourdhui));
+
+
+        var zoneDateTime = ZonedDateTime.of(
+                LocalDate.of(2022, 01,12),
+                LocalTime.of(12,05,33),
+                ZoneId.of("Japan")
+
+        );
+
+        var formater = DateTimeFormatter.ISO_ZONED_DATE_TIME;
+        System.out.println("formater : " + formater.format(zoneDateTime));
+
+
+
 
     }
 }

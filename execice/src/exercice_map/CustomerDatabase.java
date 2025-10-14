@@ -4,21 +4,28 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class CustomerDatabase {
+
+
     // TODO: Fusionner deux bases de données
     public static Map<String, String> mergeDatabases(Map<String, String> db1, Map<String, String> db2) {
         // À implémenter avec putAll()
         // Créer une nouvelle map et y mettre les deux bases
-        return null;
+        Map<String, String> newData = new HashMap<>();
+        newData.putAll(db1); // Ajoute toutes les entrées de db1
+        newData.putAll(db2); // Ajoute celles de db2 (écrase les doublons de db1 si mêmes clés)
+        return newData;
     }
 
     // TODO: Ajouter tous les clients d'une base dans une autre
     public static void addAllCustomers(Map<String, String> targetDb, Map<String, String> sourceDb) {
         // À implémenter avec putAll()
+        targetDb.putAll(sourceDb);
     }
 
     // TODO: Afficher une base de données
     public static void displayDatabase(String dbName, Map<String, String> database) {
         // À implémenter
+        System.out.println(dbName + " : " + database);
     }
 
     public static void main(String[] args) {

@@ -18,13 +18,13 @@ public class CountryPopulation {
     // TODO: Obtenir tous les noms de pays
     public Set<String> getAllCountries() {
         // À implémenter avec keySet()
-        return new HashSet<>(populations.keySet());
+        return populations.keySet();
     }
 
     // TODO: Obtenir toutes les populations
     public Collection<Long> getAllPopulations() {
         // À implémenter avec values()
-        return new ArrayList<>(populations.values());
+        return populations.values();
     }
 
     // TODO: Afficher toutes les paires pays-population

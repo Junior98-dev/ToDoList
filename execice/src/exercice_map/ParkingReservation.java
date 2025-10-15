@@ -3,6 +3,7 @@ package exercice_map;
 // Exercice 4: Réservation de Parking
         //**Méthodes à utiliser:** `putIfAbsent()`, `replace()`, `remove()`, `get()`
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -16,27 +17,24 @@ public class ParkingReservation {
     // TODO: Réserver une place seulement si elle est libre
     public boolean reserveSpot(int spotNumber, String ownerName) {
         // À implémenter avec putIfAbsent()
-        parkingSpots.computeIfAbsent(spotNumber, p -> ownerName);
+        //parkingSpots.computeIfAbsent(spotNumber, p -> ownerName);
         // Retourner true si réservation réussie, false sinon
-        return parkingSpots.containsValue(ownerName);
+        var value = parkingSpots.putIfAbsent(spotNumber, ownerName);
+        return value == null;
     }
 
     // TODO: Changer le propriétaire d'une place
     public String changeOwner(int spotNumber, String newOwner) {
         // À implémenter avec replace()
         // Retourner l'ancien propriétaire
-        String lastName = parkingSpots.get(spotNumber);
-        parkingSpots.replace(spotNumber, newOwner);
-        return lastName;
+        return parkingSpots.replace(spotNumber, newOwner);
     }
 
     // TODO: Libérer une place
     public String releaseSpot(int spotNumber) {
         // À implémenter avec remove()
         // Retourner le nom de l'ancien propriétaire
-        String lastName = parkingSpots.get(spotNumber);
-        parkingSpots.remove(spotNumber);
-        return lastName;
+        return parkingSpots.remove(spotNumber);
     }
 
     // TODO: Obtenir le propriétaire d'une place
@@ -66,5 +64,6 @@ public class ParkingReservation {
         System.out.println("Libérer place 2: " + parking.releaseSpot(2));
 
         parking.displayReservations();
+
     }
 }
